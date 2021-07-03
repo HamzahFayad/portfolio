@@ -1,0 +1,36 @@
+@mixin grid-layout($display, $gtc, $gap) {
+    display: $display;
+    grid-template-columns: $gtc;
+    grid-gap: $gap;
+  }
+  
+  @mixin block-center {
+    margin: 2% auto;
+    padding: 2%;
+  }
+  
+  @mixin text-space {
+    margin: 1% auto;
+    padding: .5%;
+  }
+  
+  /*mixin with parameters*/
+  @mixin block-center-variable($margin-top-btm, $padding-all) {
+    margin: $margin-top-btm auto;
+    padding: $padding-all;
+  }
+  
+  @mixin flexbox-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch; 
+  }
+  
+  @mixin flex-mixin {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  

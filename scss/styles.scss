@@ -1,0 +1,498 @@
+@use "reset";
+@import "vars";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+
+html,
+body {
+  font-family: "Source Sans Pro", "Helvetica", "sans-serif";
+  font-weight: 350;
+  text-align: center;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.head {
+  padding-top: 7rem;
+}
+h1 {
+  color: #000;
+  padding: 12px;
+}
+
+strong {
+  color: #1c1c1c;
+  border-bottom: 2px solid lighten($color_3, 14%);
+  font-weight: 500;
+}
+a {
+  color: $color_3;
+  font-weight: 500;
+  &:hover {
+    color: $color_2;
+  }
+}
+
+.logo {
+  width: 120px;
+  height: 90px;
+  display: block;
+  margin: 6px auto;
+}
+
+.logo2 {
+  max-width: 150px;
+  transform: translate3d(0, 0, 0);
+  animation: fly 1s infinite alternate;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+  padding: 33px 0px;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 4px;
+  span {
+    color: lighten($color_3, 14%);
+  }
+}
+
+h4 {
+  color: #fff;
+  font-weight: 300;
+  padding: 22px;
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+}
+
+p {
+  padding: 6px 0;
+}
+
+.slogan {
+  //animation: x 2s ease-in-out infinite alternate-reverse;
+  color: lighten($color_3, 15%);
+  font-weight: 500;
+  font-size: 22px;
+}
+
+@keyframes x {
+  from {
+    letter-spacing: 2.5px;
+    transform: translateY(0px);
+    color: #fff;
+  }
+  to {
+    letter-spacing: 5px;
+    transform: translateY(2px);
+    color: $color_3;
+  }
+}
+
+.menu_links {
+  transform: translate3d(0, 0, 200px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  background: #1c1c1c;
+  box-shadow: 2px 1px 9px lighten($color_1, 4%);
+  padding: 20px 0px;
+  z-index: 99;
+  a {
+    display: inline-block;
+    line-height: 25px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.1s ease-out;
+    margin-top: 20px;
+    &:hover {
+      transform: scale(1.1);
+      color: lighten($color_3, 4%);
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  background: $color_3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
+  a {
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.aboutme {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  //animation: typing-machine 3.5s steps(40, end) alternate infinite;
+}
+
+@keyframes typing-machine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  display: block;
+  animation: flip 1s infinite;
+}
+
+@keyframes fly {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateBack {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.about {
+  @include block-center;
+  .sct__about {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 0;
+    gap: 4%;
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+    }
+    p {
+      max-width: 420px;
+      text-align: justify;
+      color: #1c1c1c;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 0 20px;
+    }
+  }
+  .lang {
+    text-align: justify;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 1.1rem;
+    p {
+      font-weight: 400;
+    }
+  }
+}
+
+.contact {
+  background: darken($color_2, 10%);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.portfolio {
+  background: $color_2;
+  margin: 0 auto;
+}
+
+.portfolio_cards {
+  padding: 10px 0px;
+  margin: auto 2%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .card {
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.045);
+    }
+    img {
+      max-width: 300px;
+      height: 200px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 2px 1px 2px $color_1;
+    }
+    p {
+      color: $color_1;
+      text-align: center;
+    }
+  }
+}
+
+.coming-soon {
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+/*.photography_card {
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+.photography {
+  //-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, transparent) , to(rgba(250, 250, 250, 0.5)));
+  padding: 6px;
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 400px;
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+  &:hover {
+    transform: scale(1.05);
+    //outline: 1px solid #fff;
+    //outline-offset: -20px;
+  }
+  @media only screen and (max-width: 900px) {
+    max-width: 200px;
+    max-height: 250px;
+  }
+}*/
+
+.photos {
+  .photography1 {
+    &__p1 {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      gap: 10px 10px;
+      div {
+        position: relative;
+        height: 350px;
+        background-size: cover;
+        border: 2px solid #fff;
+        border-bottom: 40px solid #fff;
+        p {
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+          right: 0;
+          color: $color_1;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.insta_card {
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  h3 {
+    line-height: 44px;
+    padding-right: 12px;
+    color: #fff;
+    font-weight: 150;
+  }
+  img {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 40px;
+    filter: grayscale(30%);
+    &:hover {
+      filter: none;
+      animation: rotate 0.5s ease-in;
+      transform: scale(1.05);
+    }
+  }
+}
+
+p {
+  color: #fff;
+  //text-align: center;
+}
+
+.tools {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0 -5px;
+}
+
+.icon {
+  color: #fff;
+  padding: 0px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+}
+
+.icon_tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #65bd65;
+  gap: 6px;
+  cursor: pointer;
+  margin: 0 5px;
+  //margin: 0 auto;
+  .icon {
+    transition: 350ms ease-in-out;
+    position: absolute;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background: #549c54;
+  border-radius: 50%;
+  transition: 0.5s ease-in;
+}
+
+.tools_2nd {
+  background: $color_21;
+}
+.ov_2nd {
+  background: lighten($color_21, 5%);
+}
+
+.tools_3rd {
+  background: $color_3;
+}
+.ov_3rd {
+  background: lighten($color_3, 5%);
+}
+
+.tools_4th {
+  background: transparent;
+  border: 2px solid lighten($color_3, 15%);
+}
+.ov_4th {
+  background: transparent;
+  font-size: 0.9rem;
+}
+
+i {
+  font-style: normal;
+}
+
+.tools_4th:hover .icon {
+  transform: scale(0);
+}
+.icon_tools:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+}
+
+.tags {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  //margin: 2% 0px;
+  @media only screen and (max-width: 600px) {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .tags_text {
+    width: 150px;
+    background: #fff;
+    border-radius: 6px;
+    margin: 0 5px;
+    padding: 12px 0;
+    @media only screen and (max-width: 600px) {
+      margin: 5px 0;
+      width: 300px;
+    }
+    p {
+      text-align: center;
+      color: darken($color_1, 14%);
+      font-weight: 400;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    .sct__about {
+      flex-flow: column wrap;
+      img {
+        width: 130px;
+        height: 130px;
+      }
+      p {
+        margin-top: 4px;
+        max-width: 400px;
+      }
+    }
+  }
+  .photos {
+    height: 1750px;
+    .photography1 {
+      &__p1 {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 1600px;
+      }
+    }
+  }
+}
