@@ -98,8 +98,8 @@ p {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  background: #1c1c1c;
-  box-shadow: 2px 1px 9px lighten($color_1, 4%);
+  background: $color_1;
+  //box-shadow: 2px 1px 9px lighten($color_1, 4%);
   padding: 20px 0px;
   z-index: 99;
   a {
