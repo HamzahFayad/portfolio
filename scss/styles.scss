@@ -157,7 +157,7 @@ p {
 
 .fade-in {
   display: block;
-  animation: flip 1s infinite;
+  animation: flip 1s forwards;
 }
 
 @keyframes fly {
@@ -171,10 +171,10 @@ p {
 
 @keyframes flip {
   from {
-    transform: rotateY(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotateY(360deg);
+    opacity: 1;
   }
 }
 

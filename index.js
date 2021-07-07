@@ -1,12 +1,10 @@
 "use strict";
 
 {
-
- /* let logo = document.querySelector(".logo");
+  /* let logo = document.querySelector(".logo");
   logo.addEventListener("click", function() {
     location.reload();
   })*/
-
 
   let scrollpos = window.scrollY;
   let menu_hidden = document.querySelector(".menu");
@@ -25,5 +23,4 @@
       remove_class_on_scroll();
     }
   });
-
 }
