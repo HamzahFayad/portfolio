@@ -207,8 +207,9 @@ p {
     gap: 4%;
     img {
       width: 180px;
-      height: 180px;
+      height: 150px;
       border-radius: 50%;
+      filter: saturate(110%);
     }
     p {
       max-width: 420px;

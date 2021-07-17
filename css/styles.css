@@ -213,8 +213,9 @@ p {
 }
 .about .sct__about img {
   width: 180px;
-  height: 180px;
+  height: 150px;
   border-radius: 50%;
+  filter: saturate(110%);
 }
 .about .sct__about p {
   max-width: 420px;
