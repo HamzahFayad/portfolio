@@ -226,13 +226,60 @@ p {
   padding: 0 20px;
 }
 .about .lang {
-  text-align: justify;
+  text-align: center;
   margin: 0 auto;
-  display: inline-block;
+  display: block;
   font-size: 1.1rem;
 }
 .about .lang p {
   font-weight: 400;
+  line-height: 28px;
+}
+
+.fab {
+  font-size: 25px;
+  padding: 0 4px;
+}
+.fab.fa-html5 {
+  color: red;
+}
+.fab.fa-css3-alt {
+  color: blue;
+}
+.fab.fa-sass {
+  color: #ff518b;
+}
+.fab.fa-js-square {
+  color: #e7b11d;
+}
+.fab.fa-java {
+  color: #0066ff;
+}
+.fab.fa-vuejs {
+  color: #199169;
+}
+.fab.fa-node-js {
+  color: #308609;
+}
+.fab.fa-python {
+  color: #ff7300;
+}
+.fab.fa-figma {
+  color: #b700ff;
+}
+
+.fas {
+  font-size: 25px;
+  padding: 0 4px;
+}
+.fas.fa-database {
+  color: #3b3b3b;
+}
+.fas.fa-file-code {
+  color: #4e004e;
+}
+.fas.fa-xd {
+  color: #b9006c;
 }
 
 .contact {
