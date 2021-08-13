@@ -98,14 +98,14 @@ p {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  background: $color_1;
-  //box-shadow: 2px 1px 9px lighten($color_1, 4%);
+  background: #fff;
+  box-shadow: 2px 1px 5px lighten(#1c1c1c, 12%);
   padding: 20px 0px;
   z-index: 99;
   a {
     display: inline-block;
     line-height: 25px;
-    color: #fff;
+    color: #2b2b2b;
     font-size: 20px;
     text-decoration: none;
     transition: all 0.1s ease-out;
@@ -270,7 +270,7 @@ p {
     color: #3b3b3b;
   }
   &.fa-file-code {
-    color: rgb(78, 0, 78);
+    color: rgb(8, 0, 78);
   }
   &.fa-xd {
     color: rgb(185, 0, 108);

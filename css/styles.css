@@ -108,14 +108,15 @@ p {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  background: #14213d;
+  background: #fff;
+  box-shadow: 2px 1px 5px #3b3b3b;
   padding: 20px 0px;
   z-index: 99;
 }
 .menu_links a {
   display: inline-block;
   line-height: 25px;
-  color: #fff;
+  color: #2b2b2b;
   font-size: 20px;
   text-decoration: none;
   transition: all 0.1s ease-out;
@@ -276,7 +277,7 @@ p {
   color: #3b3b3b;
 }
 .fas.fa-file-code {
-  color: #4e004e;
+  color: #08004e;
 }
 .fas.fa-xd {
   color: #b9006c;
