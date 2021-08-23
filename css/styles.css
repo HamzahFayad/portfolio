@@ -109,7 +109,7 @@ p {
   flex-flow: row nowrap;
   justify-content: space-evenly;
   background: #fff;
-  box-shadow: 2px 1px 5px #3b3b3b;
+  box-shadow: 2px 1px 4px #3b3b3b;
   padding: 20px 0px;
   z-index: 99;
 }
