@@ -306,7 +306,7 @@ p {
   transition: all 0.2s ease-in-out;
 }
 .portfolio_cards .card:hover {
-  transform: scale(1.045);
+  transform: scale(1.025);
 }
 .portfolio_cards .card img {
   max-width: 300px;
