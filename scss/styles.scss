@@ -347,12 +347,14 @@ p {
 }*/
 
 .photos {
+  max-width: 95%;
+  margin: 0 auto;
   .photography1 {
     &__p1 {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-around;
-      gap: 10px 10px;
+      gap: 20px;
       div {
         position: relative;
         height: 350px;
@@ -532,7 +534,7 @@ i {
     }
   }
   .photos {
-    height: 1750px;
+    min-height: 1750px;
     .photography1 {
       &__p1 {
         flex-flow: column nowrap;

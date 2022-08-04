@@ -351,11 +351,15 @@ p {
     max-height: 250px;
   }
 }*/
+.photos {
+  max-width: 95%;
+  margin: 0 auto;
+}
 .photos .photography1__p1 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  gap: 10px 10px;
+  gap: 20px;
 }
 .photos .photography1__p1 div {
   position: relative;
@@ -537,7 +541,7 @@ i {
   }
 
   .photos {
-    height: 1750px;
+    min-height: 1750px;
   }
   .photos .photography1__p1 {
     flex-flow: column nowrap;
